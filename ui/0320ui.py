@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         self.groupBox_2.setGeometry(QtCore.QRect(19, 419, 801, 341))
         self.groupBox_2.setObjectName("groupBox_2")
         self.tabWidget = QtWidgets.QTabWidget(self.groupBox_2)
-        self.tabWidget.setGeometry(QtCore.QRect(50, 50, 771, 301))
+        self.tabWidget.setGeometry(QtCore.QRect(16, 19, 771, 301))
         self.tabWidget.setObjectName("tabWidget")
         self.tab = QtWidgets.QWidget()
         self.tab.setObjectName("tab")
