@@ -16,11 +16,31 @@ font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get
 rc('font', family=font_name)
 
 y_value = (float(death_ratio_30[:-1]),float(death_ratio_40[:-1]),float(death_ratio_50[:-1]),float(death_ratio_60[:-1]),float(death_ratio_70[:-1]),float(death_ratio_80[:-1]))
-x_name=('30대','40대','50대','60대','70대','80대')
+x_name=['30대','40대','50대','60대','70대','80대']
 n_groups = len(x_name)
 index = np.arange(n_groups)
 
-plt.bar(index, y_value, tick_label=x_name, align='center')
+fig = plt.figure()
+ax = fig.add_subplot(111)
+ax.bar(index, y_value, tick_label=x_name, align='center')
+
+for p in ax.patches :
+    left, bottom, width, height = p.get_bbox().bounds
+    ax.annotate("{}%".format(height), (left+width/2, height+0.1), ha='center')
+
+
+def move_cursor(event) :
+    x_name=['30대','40대','50대','60대','70대','80대']
+    if event.inaxes != ax:
+        return
+    x=event.xdata
+    y=event.ydata
+    print(x)
+    plt.text(x,y,x_name[int((x+0.5)//1)])
+    plt.draw()
+
+plt.connect('button_press_event',move_cursor)
+
 plt.xlabel('나이')
 plt.ylabel('치사율')
 plt.title('나이대별 치사율')
