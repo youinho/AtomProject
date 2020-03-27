@@ -27,6 +27,7 @@ class Main(QMainWindow,Ui_MainWindow):
         # 시그널 초기화
         self.initSignal()
         self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget_local_view.setCurrentIndex(0)
 
 
 
@@ -38,6 +39,11 @@ class Main(QMainWindow,Ui_MainWindow):
         self.pushButton_local.clicked.connect(self.changeMain_1)
         self.pushButton_local.clicked.connect(self.changeCategory_0)
 
+        # 국내현황 버튼3개
+        self.pushButton_category_local_1.clicked.connect(self.changeLocalView_0)
+        self.pushButton_category_local_2.clicked.connect(self.changeLocalView_1)
+        self.pushButton_category_local_3.clicked.connect(self.changeLocalView_2)
+
 
         # 세계현황
         self.pushButton_world.clicked.connect(self.changeMain_1)
@@ -46,6 +52,7 @@ class Main(QMainWindow,Ui_MainWindow):
         # 지도
         self.pushButton_map.clicked.connect(self.changeMain_1)
         self.pushButton_map.clicked.connect(self.changeCategory_2)
+
 
 
 
