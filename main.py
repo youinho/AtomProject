@@ -14,7 +14,7 @@ import sys, io
 from PyQt5.QtMultimedia import QSound
 #차트 import
 from lib.test0327 import Ui_Form
-form lib.txtdata_read1 import txtdata
+from lib.txtdata_read1 import txtdata
 
 
 from lib.daily_chart1 import daily_chart
