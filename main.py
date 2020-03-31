@@ -13,11 +13,12 @@ from ui.UI_Main import Ui_MainWindow
 import sys, io
 from PyQt5.QtMultimedia import QSound
 #차트 import
-from code.part2 import daily_chart1
-import total_chart1
-import world_page
-import bar
-import pie
+from lib.test0327 import Ui_Form
+form lib.txtdata_read1 import txtdata
+
+
+from lib.daily_chart1 import daily_chart
+
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(),encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.detach(),encoding='utf-8')
 
