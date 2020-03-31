@@ -23,7 +23,7 @@ class bar_chart(QWidget):
     def __init__(self, parent=None):
         QWidget.__init__(self,parent)
         self.setupUI()
-        
+
     def setupUI(self):
         self.setGeometry(-50,270,800,400)
 
