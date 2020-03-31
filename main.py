@@ -13,6 +13,7 @@ from UI_Main import Ui_MainWindow
 import sys, io
 from PyQt5.QtMultimedia import QSound
 
+
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(),encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.detach(),encoding='utf-8')
 
@@ -53,6 +54,10 @@ class Main(QMainWindow,Ui_MainWindow):
         self.pushButton_map.clicked.connect(self.changeMain_1)
         self.pushButton_map.clicked.connect(self.changeCategory_2)
 
+        self.pb_home_part1_1.clicked.connect(self.home_part_2)
+        self.pb_home_part2.clicked.connect(self.home_part_1)
+
+
 
     # 홈/메인 전환
     def changeMain_0(self): # 홈
@@ -61,8 +66,14 @@ class Main(QMainWindow,Ui_MainWindow):
         self.pushButton_world.setEnabled(True)
         self.pushButton_map.setEnabled(True)
 
+
+
+
     def changeMain_1(self): # 메인
         self.stackedWidget.setCurrentIndex(1)
+
+
+
 
 
     # 메인 >  전환
@@ -85,6 +96,14 @@ class Main(QMainWindow,Ui_MainWindow):
         self.pushButton_map.setEnabled(False)
 
 
+        # 홈 > 개요/예방수칙
+    def home_part_1(self) :
+        self.home_view_part.setCurrentIndex(0)
+
+    def home_part_2(self) :
+        self.home_view_part.setCurrentIndex(1)
+
+
     # 국내 버튼 누르고 > 하단 뷰창
     def changeLocalView_0(self):
         self.stackedWidget_local_view.setCurrentIndex(0)
@@ -92,6 +111,11 @@ class Main(QMainWindow,Ui_MainWindow):
         self.stackedWidget_local_view.setCurrentIndex(1)
     def changeLocalView_2(self):
         self.stackedWidget_local_view.setCurrentIndex(2)
+
+
+
+
+
 
 if __name__=="__main__":
     app = QApplication(sys.argv)
