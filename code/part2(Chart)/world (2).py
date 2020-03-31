@@ -30,11 +30,13 @@ first_positive_list=[]
 #첫 번째 페이지 나라별 리스트
 for a in first_page_nation :
     first_nation_list.append(a.string)
+print(first_nation_list)
 
 #첫 번째 페이지 나라의 확진자 수 리스트
 for b in first_page_positive :
     b=b.string.replace(",","")
     first_positive_list.append(int(b))
+print(first_positive_list)
 
 #두 번째 페이지 나라별 리스트
 # for c in second_page_nation :

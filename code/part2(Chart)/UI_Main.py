@@ -20,7 +20,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
 
     # ★★★★★★★★★★★★★★★ 이미지 저장 경로 변경★★★★★★★★★★★★★★★★★★★
-        save="D:/AtomProject/img_source/"
+        save="D:/teamproject/project_atom1_git/teamproject_atom/v3.0/img_source/"
     # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
 
@@ -56,15 +56,17 @@ class Ui_MainWindow(object):
         self.label_condition_img.setObjectName("label_condition_img")
 
         self.label_con_1 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_1.setGeometry(QtCore.QRect(260, 20, 61, 31))
+        #라벨위치바꿈 ()
+        self.label_con_1.setGeometry(QtCore.QRect(270, 20, 61, 31))
         self.label_con_1.setStyleSheet("font: 20pt \"돋움\";")
         self.label_con_1.setObjectName("label_con_1")
 
         self.label_con_2 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_2.setGeometry(QtCore.QRect(650, 20, 71, 31))
+        self.label_con_2.setGeometry(QtCore.QRect(660, 20, 71, 31))
         self.label_con_2.setStyleSheet("font: 20pt \"돋움\";")
         self.label_con_2.setObjectName("label_con_2")
 
+        #라벨위치바꿈
         self.label_con_3 = QtWidgets.QLabel(self.group_condition)
         self.label_con_3.setGeometry(QtCore.QRect(60, 110, 121, 101))
         self.label_con_3.setStyleSheet("font: 30pt \"돋움\";")
@@ -128,7 +130,7 @@ class Ui_MainWindow(object):
 
         # 메인-뷰3개
         self.main_category = QtWidgets.QStackedWidget(self.main)
-        self.main_category.setGeometry(QtCore.QRect(0, 0, 751, 761))
+        self.main_category.setGeometry(QtCore.QRect(0, 0, 1000, 770))
         self.main_category.setObjectName("main_category")
             # 로컬
         self.page_local = QtWidgets.QWidget()
@@ -160,22 +162,22 @@ class Ui_MainWindow(object):
 
             # 로컬> 뷰페이지
         self.stackedWidget_local_view = QtWidgets.QStackedWidget(self.page_local)
-        self.stackedWidget_local_view.setGeometry(QtCore.QRect(20, 90, 741, 661))
+        self.stackedWidget_local_view.setGeometry(QtCore.QRect(20, 90, 760, 680))
         self.stackedWidget_local_view.setObjectName("stackedWidget_local_view")
             # 뷰1
-        self.page_local_view_1 = QtWidgets.QWidget()
-        self.page_local_view_1.setObjectName("page_local_view_1")
-        self.label_local_view_1 = QtWidgets.QLabel(self.page_local_view_1)
+        self.view_daily_chart = QtWidgets.QWidget()
+        self.view_daily_chart.setObjectName("view_daily_chart")
+        self.label_local_view_1 = QtWidgets.QLabel(self.view_daily_chart)
         self.label_local_view_1.setGeometry(QtCore.QRect(220, 130, 56, 12))
         self.label_local_view_1.setObjectName("label_local_view_1")
-        self.stackedWidget_local_view.addWidget(self.page_local_view_1)
+        self.stackedWidget_local_view.addWidget(self.view_daily_chart)
             # 뷰2
-        self.page_local_view_2 = QtWidgets.QWidget()
-        self.page_local_view_2.setObjectName("page_local_view_2")
-        self.label_local_view_2 = QtWidgets.QLabel(self.page_local_view_2)
+        self.view_total_chart = QtWidgets.QWidget()
+        self.view_total_chart.setObjectName("view_total_chart")
+        self.label_local_view_2 = QtWidgets.QLabel(self.view_total_chart)
         self.label_local_view_2.setGeometry(QtCore.QRect(260, 280, 56, 12))
         self.label_local_view_2.setObjectName("label_local_view_2")
-        self.stackedWidget_local_view.addWidget(self.page_local_view_2)
+        self.stackedWidget_local_view.addWidget(self.view_total_chart)
             # 뷰3
         self.page_local_view_3 = QtWidgets.QWidget()
         self.page_local_view_3.setObjectName("page_local_view_3")

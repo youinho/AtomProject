@@ -19,49 +19,39 @@ sys.stderr = io.TextIOWrapper(sys.stderr.detach(),encoding="utf-8")
 font_name = font_manager.FontProperties(fname="c:/Windows/Fonts/malgun.ttf").get_name()
 rc('font', family=font_name)
 
-class pie_chart(QWidget):
-    def __init__(self,parent=None):
+class bar_chart(QWidget):
+    def __init__(self, parent=None):
         QWidget.__init__(self,parent)
         self.setupUI()
-
+        
     def setupUI(self):
-        self.setGeometry(180, -20, 350, 350)
+        self.setGeometry(-50,270,800,400)
 
         self.fig = plt.Figure()
         self.canvas = FigureCanvas(self.fig)
         ax=self.fig.add_subplot(111)
 
-        labels = ['남성', '여성']
-        sizes = [float(gender_m[:-1]),float(gender_w[:-1])]
-        colors = ['blue','red']
-        explode = (0.01,0.01)
-        ax.set_title("성별 대비")
-        ax.pie(sizes, explode=explode, labels=labels, colors=colors,
-                autopct='%1.1f%%', shadow=True, startangle=90)
-        ax.axis('equal')
-
         leftLayout = QVBoxLayout()
         leftLayout.addWidget(self.canvas)
         self.setLayout(leftLayout)
-        self.canvas.draw()
 
-    def getMain(self):
-        list = []
-        list.append(today_definite)
-        list.append(today_treat)
-        list.append(total)
-        list.append(definite)
-        list.append(treat)
-        list.append(death)
-        list.append(plus_total)
-        list.append(plus_definite)
-        list.append(plus_treat)
-        list.append(plus_death)
-        return list
+        ratio = (float(death_ratio_30[:-1]), float(death_ratio_40[:-1]), float(death_ratio_50[:-1]), float(death_ratio_60[:-1]), float(death_ratio_70[:-1]), float(death_ratio_80[:-1]))
+        age=['30대','40대','50대','60대','70대','80대']
+        index = np.arange(len(age))
+
+        ax.bar(index, ratio, tick_label=age, align='center')
+
+        for p in ax.patches :
+            left, bottom, width, height = p.get_bbox().bounds
+            ax.annotate("{}%".format(height), (left+width/2, height+0.1), ha='center')
+
+        ax.grid(color='lightgray')
+        ax.set_xlabel('나이')
+        ax.set_title('나이대별 치사율')
+        self.canvas.draw()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = pie_chart()
-
+    window = bar_chart()
     window.show()
     app.exec_()

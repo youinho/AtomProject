@@ -51,9 +51,3 @@ class world_chart(QWidget):
         ax.grid(color='lightgray')
 
         self.canvas.draw()
-
-if __name__ == "__main__":
-    app = QApplication(sys.argv)
-    window = world_chart()
-    window.show()
-    app.exec_()
