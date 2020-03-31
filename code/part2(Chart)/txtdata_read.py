@@ -40,7 +40,7 @@ class txtdata:
             return
         else:
             #txt 파일 상대경로 -> 절대경로
-            path=os.path.join(os.path.dirname(__file__), '../resource/국내확진자_추이.txt')
+            path=os.path.join(os.path.dirname(__file__), '../img_source/국내확진자_추이.txt')
             #txt 파일 열기(읽기 모드)
             lastdata=self.lines[len(self.lines)-1].replace("\n","").split("\t")
             f = open(path,'a')
