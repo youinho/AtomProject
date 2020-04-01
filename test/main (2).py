@@ -9,10 +9,12 @@ import test
 from PyQt5 import QtWebEngineWidgets, QtCore
 import re
 import datetime
-from ui.UI_Main import Ui_MainWindow
+from UI_Main import Ui_MainWindow
 import sys, io
 from PyQt5.QtMultimedia import QSound
-
+import bar
+import pie
+import world_page
 
 sys.stdout = io.TextIOWrapper(sys.stdout.detach(),encoding='utf-8')
 sys.stderr = io.TextIOWrapper(sys.stderr.detach(),encoding='utf-8')
@@ -30,7 +32,11 @@ class Main(QMainWindow,Ui_MainWindow):
         self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_local_view.setCurrentIndex(0)
 
-
+        # world_bar=w_b.world_chart(self.page_world)
+        domestic_pie=pie.pie_chart(self.page_local_view_3)
+        domestic_bar=bar.bar_chart(self.page_local_view_3)
+        world_bar = world_page.page_world(self.page_world)
+        world_bar.setGeometry(QtCore.QRect(50,150,700,700))
 
     def initSignal(self) :
     #----- push버튼 3종세트
@@ -50,6 +56,7 @@ class Main(QMainWindow,Ui_MainWindow):
         self.pushButton_world.clicked.connect(self.changeMain_1)
         self.pushButton_world.clicked.connect(self.changeCategory_1)
 
+
         # 지도
         self.pushButton_map.clicked.connect(self.changeMain_1)
         self.pushButton_map.clicked.connect(self.changeCategory_2)
@@ -64,6 +71,9 @@ class Main(QMainWindow,Ui_MainWindow):
 
     def changeMain_1(self): # 메인
         self.stackedWidget.setCurrentIndex(1)
+
+
+
 
 
     # 메인 >  전환
@@ -86,6 +96,7 @@ class Main(QMainWindow,Ui_MainWindow):
         self.pushButton_map.setEnabled(False)
 
 
+
     # 국내 버튼 누르고 > 하단 뷰창
     def changeLocalView_0(self):
         self.stackedWidget_local_view.setCurrentIndex(0)
@@ -93,6 +104,10 @@ class Main(QMainWindow,Ui_MainWindow):
         self.stackedWidget_local_view.setCurrentIndex(1)
     def changeLocalView_2(self):
         self.stackedWidget_local_view.setCurrentIndex(2)
+
+
+
+
 
 if __name__=="__main__":
     app = QApplication(sys.argv)
