@@ -5,6 +5,9 @@ from coding.part2.pie import *
 from coding.part2.world_page import *
 import coding.part2.daily_chart as daily_chart
 import coding.part2.total_chart as total_chart
+import coding.part3.Coronyang_Korea as map_korea
+import coding.part3.Coronyang_Seoul as map_seoul
+import coding.part3.Coronyang_world as map_world
 
 class Main(QMainWindow,Ui_MainWindow):
     #생성자
@@ -21,7 +24,8 @@ class Main(QMainWindow,Ui_MainWindow):
         self.chart1=daily_chart.daily_chart(self.view_daily_chart)
         self.chart2=total_chart.total_chart(self.view_total_chart)
 
-
+        #지도 초기화
+        self.changeMapView_0()
         # 시그널 초기화
         self.initSignal()
         self.stackedWidget.setCurrentIndex(0)
@@ -123,11 +127,30 @@ class Main(QMainWindow,Ui_MainWindow):
 
     # 지도 버튼 누르고 > 하단 뷰창
     def changeMapView_0(self):
-        self.stackedWidget_map_view.setCurrentIndex(0)
-    def changeMapView_1(self):
+        #한국
         self.stackedWidget_map_view.setCurrentIndex(1)
-    def changeMapView_2(self):
+        m = map_korea.korea_map()
+        path=os.path.join(os.path.dirname(__file__), m.geturl())
+        url=QtCore.QUrl.fromLocalFile(path)
+        self.webEngine_map_korea.load(url)
+
+    def changeMapView_1(self):
+        #서울
         self.stackedWidget_map_view.setCurrentIndex(2)
+        s = map_seoul.seoul_map()
+        path=os.path.join(os.path.dirname(__file__), s.geturl())
+        url=QtCore.QUrl.fromLocalFile(path)
+        self.webEngine_map_seoul.load(url)
+
+
+    def changeMapView_2(self):
+        #세계
+        self.stackedWidget_map_view.setCurrentIndex(0)
+        w = map_world.world_map()
+        path=os.path.join(os.path.dirname(__file__), w.geturl())
+        url=QtCore.QUrl.fromLocalFile(path)
+        self.webEngine_map_world.load(url)
+
 
 
 if __name__=="__main__":

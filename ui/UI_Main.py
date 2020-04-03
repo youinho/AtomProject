@@ -20,7 +20,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
 
     # ★★★★★★★★★★★★★★★ 이미지 저장 경로 변경★★★★★★★★★★★★★★★★★★★
-        save="D:/AtomProject/img_source/"
+        save="img_source/"
     # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
 
@@ -50,56 +50,91 @@ class Ui_MainWindow(object):
             # 확진자현황-img
         self.label_condition_img = QtWidgets.QLabel(self.group_condition)
         self.label_condition_img.setGeometry(QtCore.QRect(0, 0, 771, 271))
-        # self.label_condition_img.setStyleSheet("font: 30pt \"돋움\";")
+        # self.label_condition_img.setStyleSheet("font: 30pt \"맑은 고딕\";")
         self.label_condition_img.setAutoFillBackground(True)
         self.label_condition_img.setPixmap(QtGui.QPixmap(save+"label_condition_img.jpg"))
         self.label_condition_img.setObjectName("label_condition_img")
 
+
         self.label_con_1 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_1.setGeometry(QtCore.QRect(270, 20, 61, 31))
-        self.label_con_1.setStyleSheet("font: 20pt \"돋움\";")
+        self.label_con_1.setGeometry(QtCore.QRect(255, 20, 61, 31))
+        self.label_con_1.setStyleSheet("font: 25pt \"맑은 고딕\";")
         self.label_con_1.setObjectName("label_con_1")
+        font1 = self.label_con_1.font()
+        font1.setBold(True)
+        self.label_con_1.setFont(font1)
 
         self.label_con_2 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_2.setGeometry(QtCore.QRect(660, 20, 71, 31))
-        self.label_con_2.setStyleSheet("font: 20pt \"돋움\";")
+        self.label_con_2.setGeometry(QtCore.QRect(650, 20, 71, 31))
+        self.label_con_2.setStyleSheet("font: 25pt \"맑은 고딕\";")
         self.label_con_2.setObjectName("label_con_2")
+        font1 = self.label_con_2.font()
+        font1.setBold(True)
+        self.label_con_2.setFont(font1)
 
         self.label_con_3 = QtWidgets.QLabel(self.group_condition)
         self.label_con_3.setGeometry(QtCore.QRect(60, 110, 121, 101))
-        self.label_con_3.setStyleSheet("font: 30pt \"돋움\";")
+        self.label_con_3.setStyleSheet("font: 30pt \"맑은 고딕\";")
         self.label_con_3.setObjectName("label_con_3")
+        font1 = self.label_con_3.font()
+        font1.setBold(True)
+        self.label_con_3.setFont(font1)
 
         self.label_con_4 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_4.setGeometry(QtCore.QRect(260, 110, 121, 101))
-        self.label_con_4.setStyleSheet("font: 30pt \"돋움\";")
+        self.label_con_4.setGeometry(QtCore.QRect(270, 110, 121, 101))
+        self.label_con_4.setStyleSheet("font: 30pt \"맑은 고딕\";")
         self.label_con_4.setObjectName("label_con_4")
+        font1 = self.label_con_4.font()
+        font1.setBold(True)
+        self.label_con_4.setFont(font1)
 
         self.label_con_5 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_5.setGeometry(QtCore.QRect(460, 110, 131, 101))
-        self.label_con_5.setStyleSheet("font: 30pt \"돋움\";")
+        self.label_con_5.setGeometry(QtCore.QRect(465, 110, 131, 101))
+        self.label_con_5.setStyleSheet("font: 30pt \"맑은 고딕\";")
         self.label_con_5.setObjectName("label_con_5")
+        font1 = self.label_con_5.font()
+        font1.setBold(True)
+        self.label_con_5.setFont(font1)
 
         self.label_con_6 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_6.setGeometry(QtCore.QRect(650, 110, 101, 101))
-        self.label_con_6.setStyleSheet("font: 30pt \"돋움\";")
+        self.label_con_6.setGeometry(QtCore.QRect(653, 110, 101, 101))
+        self.label_con_6.setStyleSheet("font: 30pt \"맑은 고딕\";")
         self.label_con_6.setObjectName("label_con_6")
+        font1 = self.label_con_6.font()
+        font1.setBold(True)
+        self.label_con_6.setFont(font1)
 
         self.label_con_7 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_7.setGeometry(QtCore.QRect(120, 200, 111, 51))
+        self.label_con_7.setGeometry(QtCore.QRect(115, 200, 111, 51))
+        self.label_con_7.setStyleSheet("font: 20pt \"맑은 고딕\";")
         self.label_con_7.setObjectName("label_con_7")
+        font1 = self.label_con_7.font()
+        font1.setBold(True)
+        self.label_con_7.setFont(font1)
 
         self.label_con_8 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_8.setGeometry(QtCore.QRect(300, 200, 111, 51))
+        self.label_con_8.setGeometry(QtCore.QRect(260, 200, 111, 51))
+        self.label_con_8.setStyleSheet("font: 20pt \"맑은 고딕\";")
         self.label_con_8.setObjectName("label_con_8")
+        font1 = self.label_con_8.font()
+        font1.setBold(True)
+        self.label_con_8.setFont(font1)
 
         self.label_con_9 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_9.setGeometry(QtCore.QRect(510, 200, 111, 51))
+        self.label_con_9.setGeometry(QtCore.QRect(480, 200, 111, 51))
+        self.label_con_9.setStyleSheet("font: 20pt \"맑은 고딕\";")
         self.label_con_9.setObjectName("label_con_9")
+        font1 = self.label_con_9.font()
+        font1.setBold(True)
+        self.label_con_9.setFont(font1)
 
         self.label_con_10 = QtWidgets.QLabel(self.group_condition)
-        self.label_con_10.setGeometry(QtCore.QRect(680, 200, 71, 51))
+        self.label_con_10.setGeometry(QtCore.QRect(670, 200, 71, 51))
+        self.label_con_10.setStyleSheet("font: 20pt \"맑은 고딕\";")
         self.label_con_10.setObjectName("label_con_10")
+        font10 = self.label_con_10.font()
+        font10.setBold(True)
+        self.label_con_10.setFont(font1)
 
         # 홈 - 개요/예방수칙
         self.group_view = QtWidgets.QGroupBox(self.home)
@@ -182,7 +217,7 @@ class Ui_MainWindow(object):
         #     # 예방수칙
         # self.home_view_2 = QtWidgets.QLabel(self.group_view)
         # self.home_view_2.setGeometry(QtCore.QRect(40, 260, 711, 151))
-        # self.home_view_2.setStyleSheet("font: 30pt \"돋움\";")
+        # self.home_view_2.setStyleSheet("font: 30pt \"맑은 고딕\";")
         # self.home_view_2.setObjectName("home_view_2")
 
 
@@ -208,7 +243,7 @@ class Ui_MainWindow(object):
 
         self.label_local_img = QtWidgets.QLabel(self.group_category_local)
         self.label_local_img.setGeometry(QtCore.QRect(0, 5, 781, 71))
-        # self.label_local_img.setStyleSheet("font: 30pt \"돋움\";")
+        # self.label_local_img.setStyleSheet("font: 30pt \"맑은 고딕\";")
         self.label_local_img.setPixmap(QtGui.QPixmap(save+"category_local.jpg"))
         self.label_local_img.setObjectName("label_local_img")
 
@@ -234,19 +269,19 @@ class Ui_MainWindow(object):
         self.stackedWidget_local_view.setGeometry(QtCore.QRect(20, 90, 741, 661))
         self.stackedWidget_local_view.setObjectName("stackedWidget_local_view")
             # 뷰1
-        self.page_local_view_1 = QtWidgets.QWidget()
-        self.page_local_view_1.setObjectName("page_local_view_1")
-        self.label_local_view_1 = QtWidgets.QLabel(self.page_local_view_1)
+        self.view_daily_chart = QtWidgets.QWidget()
+        self.view_daily_chart.setObjectName("view_daily_chart")
+        self.label_local_view_1 = QtWidgets.QLabel(self.view_daily_chart)
         self.label_local_view_1.setGeometry(QtCore.QRect(220, 130, 56, 12))
         self.label_local_view_1.setObjectName("label_local_view_1")
-        self.stackedWidget_local_view.addWidget(self.page_local_view_1)
+        self.stackedWidget_local_view.addWidget(self.view_daily_chart)
             # 뷰2
-        self.page_local_view_2 = QtWidgets.QWidget()
-        self.page_local_view_2.setObjectName("page_local_view_2")
-        self.label_local_view_2 = QtWidgets.QLabel(self.page_local_view_2)
+        self.view_total_chart = QtWidgets.QWidget()
+        self.view_total_chart.setObjectName("view_total_chart")
+        self.label_local_view_2 = QtWidgets.QLabel(self.view_total_chart)
         self.label_local_view_2.setGeometry(QtCore.QRect(260, 280, 56, 12))
         self.label_local_view_2.setObjectName("label_local_view_2")
-        self.stackedWidget_local_view.addWidget(self.page_local_view_2)
+        self.stackedWidget_local_view.addWidget(self.view_total_chart)
             # 뷰3
         self.page_local_view_3 = QtWidgets.QWidget()
         self.page_local_view_3.setObjectName("page_local_view_3")
@@ -268,7 +303,7 @@ class Ui_MainWindow(object):
         self.group_category_world.setObjectName("group_category_world")
         self.label_world_img = QtWidgets.QLabel(self.group_category_world)
         self.label_world_img.setGeometry(QtCore.QRect(0, 5, 781, 71))
-        # self.label_world_img.setStyleSheet("font: 30pt \"돋움\";")
+        # self.label_world_img.setStyleSheet("font: 30pt \"맑은 고딕\";")
         self.label_world_img.setPixmap(QtGui.QPixmap(save+"category_world.jpg"))
         self.label_world_img.setObjectName("label_world_img")
         self.pushButton_category_world = QtWidgets.QPushButton(self.group_category_world)
@@ -293,22 +328,66 @@ class Ui_MainWindow(object):
         self.group_category_map.setObjectName("group_category_map")
         self.label_map_img = QtWidgets.QLabel(self.group_category_map)
         self.label_map_img.setGeometry(QtCore.QRect(0, 5, 781, 71))
-        # self.label_map_img.setStyleSheet("font: 30pt \"돋움\";")
+        # self.label_map_img.setStyleSheet("font: 30pt \"맑은 고딕\";")
         self.label_map_img.setPixmap(QtGui.QPixmap(save+"category_map.jpg"))
         self.label_map_img.setObjectName("label_map_img")
 
-        self.pushButton_category_map = QtWidgets.QPushButton(self.group_category_map)
-        self.pushButton_category_map.setGeometry(QtCore.QRect(10, 15, 160, 51))
-        self.pushButton_category_map.setFlat(True)
-        self.pushButton_category_map.setObjectName("pushButton_category_map")
+        self.pushButton_category_map_1 = QtWidgets.QPushButton(self.group_category_map)
+        self.pushButton_category_map_1.setGeometry(QtCore.QRect(7, 15, 130, 51))
+        self.pushButton_category_map_1.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_category_map_1.setFlat(True)
+        self.pushButton_category_map_1.setObjectName("pushButton_category_local_1")
+        self.pushButton_category_map_2 = QtWidgets.QPushButton(self.group_category_map)
+        self.pushButton_category_map_2.setGeometry(QtCore.QRect(150, 15, 141, 51))
+        self.pushButton_category_map_2.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_category_map_2.setFlat(True)
+        self.pushButton_category_map_2.setObjectName("pushButton_category_local_2")
+        self.pushButton_category_map_3 = QtWidgets.QPushButton(self.group_category_map)
+        self.pushButton_category_map_3.setGeometry(QtCore.QRect(325, 15, 166, 51))
+        self.pushButton_category_map_3.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.pushButton_category_map_3.setFlat(True)
+        self.pushButton_category_map_3.setObjectName("pushButton_category_local_3")
+
+
+
+            # 맵> 뷰페이지
+        self.stackedWidget_map_view = QtWidgets.QStackedWidget(self.page_map)
+        self.stackedWidget_map_view.setGeometry(QtCore.QRect(20, 90, 741, 700))
+        self.stackedWidget_map_view.setObjectName("stackedWidget_map_view")
+            # 뷰1 - world
+        self.view_map_world = QtWidgets.QWidget()
+        self.view_map_world.setObjectName("view_map_world")
+        self.stackedWidget_map_view.addWidget(self.view_map_world)
+
                 # 지도 뷰 (웹뷰)
-        self.webEngine_map_view = QtWebEngineWidgets.QWebEngineView(self.page_map)
-        self.webEngine_map_view.setGeometry(QtCore.QRect(10, 90, 721, 661))
-        self.webEngine_map_view.setUrl(QtCore.QUrl("about:blank"))
-        self.webEngine_map_view.setObjectName("webEngine_map_view")
+        self.webEngine_map_world = QtWebEngineWidgets.QWebEngineView(self.view_map_world)
+        self.webEngine_map_world.setGeometry(QtCore.QRect(10, 0, 721, 700))
+        self.webEngine_map_world.setUrl(QtCore.QUrl("about:blank"))
+        self.webEngine_map_world.setObjectName("webEngine_map_world")
+
+            # 뷰2 -korea
+        self.view_map_korea = QtWidgets.QWidget()
+        self.view_map_korea.setObjectName("view_map_korea")
+        self.stackedWidget_map_view.addWidget(self.view_map_korea)
+
+                # 지도 뷰 (웹뷰)
+        self.webEngine_map_korea = QtWebEngineWidgets.QWebEngineView(self.view_map_korea)
+        self.webEngine_map_korea.setGeometry(QtCore.QRect(10, 0, 721, 700))
+        self.webEngine_map_korea.setUrl(QtCore.QUrl("about:blank"))
+        self.webEngine_map_korea.setObjectName("webEngine_map_korea")
+
+            # 뷰3 -seoul
+        self.view_map_seoul = QtWidgets.QWidget()
+        self.view_map_seoul.setObjectName("view_map_seoul")
+        self.stackedWidget_map_view.addWidget(self.view_map_seoul)
+
+                # 지도 뷰 (웹뷰)
+        self.webEngine_map_seoul = QtWebEngineWidgets.QWebEngineView(self.view_map_seoul)
+        self.webEngine_map_seoul.setGeometry(QtCore.QRect(10, 0, 721, 700))
+        self.webEngine_map_seoul.setUrl(QtCore.QUrl("about:blank"))
+        self.webEngine_map_seoul.setObjectName("webEngine_map_seoul")
+
         self.main_category.addWidget(self.page_map)
-
-
         self.stackedWidget.addWidget(self.main) # -- 메인 위젯 끝
 
 
@@ -355,7 +434,7 @@ class Ui_MainWindow(object):
             # 로고/타이틀 푸쉬버튼
         self.pushButton_logo = QtWidgets.QPushButton(self.group_pushButton)
         self.pushButton_logo.setGeometry(QtCore.QRect(10, 20, 391, 131))
-        # self.pushButton_logo.setStyleSheet("font: 30pt \"돋움\";")
+        # self.pushButton_logo.setStyleSheet("font: 30pt \"맑은 고딕\";")
         # self.pushButton_logo.setAutoDefault(False)
         # self.pushButton_logo.setDefault(False)
         self.pushButton_logo.setFlat(True)
