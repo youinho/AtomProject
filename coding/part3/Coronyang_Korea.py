@@ -43,7 +43,7 @@ class korea_map:
          threshold_scale=[0,100,200,400,500,1000,1500,8000],
          fill_opacity=0.7,
          line_opacity=0.5,
-         legend_name='코라나 확진자 (명)'
+         legend_name='코로나 확진자 (명)'
         ).add_to(m)
         m1.geojson.add_child(
             folium.features.GeoJsonTooltip(fields=['CTP_KOR_NM'],
