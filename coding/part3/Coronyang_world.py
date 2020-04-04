@@ -7,7 +7,6 @@ import folium
 import webbrowser
 import json
 from coding.part3.trip_ban_data import *
-
 # Find the original file here: https://github.com/python-visualization/folium/tree/master/examples/data
 # You have to download this file and set the directory where you saved it
 

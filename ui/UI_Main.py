@@ -20,7 +20,7 @@ class Ui_MainWindow(object):
         self.centralwidget.setObjectName("centralwidget")
 
     # ★★★★★★★★★★★★★★★ 이미지 저장 경로 변경★★★★★★★★★★★★★★★★★★★
-        save="D:/AtomProject/img_source/"
+        save="D:/Atomproject/img_source/"
     # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
 
