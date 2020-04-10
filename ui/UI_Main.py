@@ -22,7 +22,7 @@ class Ui_MainWindow(object):
         self.gridLayout.setObjectName("gridLayout")
 
     # ★★★★★★★★★★★★★★★ 이미지 저장 경로 변경★★★★★★★★★★★★★★★★★★★
-        save="img_source/"
+        save="D:/AtomProject/img_source/"
     # ★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★★
 
 
